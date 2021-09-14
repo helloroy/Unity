@@ -8,7 +8,7 @@ public class FreeLookCameraDragHandler : MonoBehaviour, IDragHandler
     public CinemachineFreeLook freeLookCamera;
 
     public float sensitivityX = 2f;
-    public float sensitivityY = 0.002f;
+    public float sensitivityY = 0.005f;
 
     [Tooltip("Uncheck it to keep the Axis input")]
     public bool disableAxisInput = true;
@@ -38,7 +38,7 @@ public class FreeLookCameraDragHandler : MonoBehaviour, IDragHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        freeLookCamera.m_XAxis.Value = eventData.delta.x * sensitivityX;
+        freeLookCamera.m_XAxis.Value += eventData.delta.x * sensitivityX;
         freeLookCamera.m_YAxis.Value += eventData.delta.y * sensitivityY;
     }
 }
