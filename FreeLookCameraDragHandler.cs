@@ -3,6 +3,10 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Cinemachine;
 
+/// <summary>
+/// UI Drap handler for Cinemachine CinemachineFreeLook https://docs.unity3d.com/Packages/com.unity.cinemachine@latest/index.html
+/// </summary>
+
 public class FreeLookCameraDragHandler : MonoBehaviour, IDragHandler
 {
     public CinemachineFreeLook freeLookCamera;
